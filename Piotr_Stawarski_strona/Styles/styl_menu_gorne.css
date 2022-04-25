@@ -1,0 +1,65 @@
+header {
+	background-color:#1BD8F5;
+	position:fixed;
+	width: 100vw;
+	display:flex;
+	padding:5px;
+}
+.logo {
+	white-space: nowrap;
+	font-size:20px;
+	font-weight:bold;
+	transition: transform 2s ease-in-out;
+	animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.logo:hover {
+	transform: rotate(360deg);
+}
+.button {
+	white-space: nowrap;
+	border-radius: 10px;
+	border: 2px solid;
+	background-color:indigo;
+}
+.button a:hover {
+	color:blue !important;
+	font-weight:normal;
+}
+.button a:link {
+	color:white;
+	text-decoration:none;
+}
+.button a:visited {
+	color:white;
+}
+nav {
+	display:flex;
+	flex-flow:row;
+	align-items:center;
+	justify-content:space-between;
+}
+@media only screen and (min-width: 1400px) {
+	.v2 {display:none}
+	.v4 {display:none}
+	.logo {	background-color:#1BD8F5;
+	border-radius:10px;}
+}
+@media only screen and (max-width: 1400px) {
+	.v1 {display:none}
+	.v4 {display:none}
+}
+@media only screen and (max-width: 1000px) {
+	.v1 {display:none}
+	.v3 {display:none}
+	.v4 {display:flex}
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}

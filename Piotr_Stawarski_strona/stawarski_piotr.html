@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <meta charset="UTF-8"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+	$("a").on('click', function() {
+	    if (this.hash !== "") {
+      event.preventDefault();
+	  var hash = this.hash;
+	  $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1100, function(){
+        window.location.hash = hash;
+      });
+    }
+	});
+	$(window).on('resize', function(){
+	if ($(window).width() < 1200) {
+	$("#menu_gorne").show();
+    $("#menu-boczne").hide();
+	}	
+	else {
+	$("#menu-boczne").show();
+	$("#menu_gorne").hide();
+	}
+	}).resize();
+	});
+  </script>
+  <meta name="description" content="Fanowska strona poświęcona serii Kamen Rider">
+  <meta name="keywords" content="Kamen Rider">
+  <meta name="author" content="Piotr Stawarski">
+  <link rel="icon" href="Images/icon.ico" />
+  <link rel="stylesheet" media="screen" href="Styles/styles.css" />
+  <link rel="stylesheet" media="screen" href="Styles/styl_menu_gorne.css" />
+  <link href="Styles/all.css" rel="stylesheet" />
+  <title>Kamen Rider po krótce</title>
+      <style>
+      body {
+        margin: 0px;
+      }
+      .side-menu-container,
+      .side-menu,
+      .side-menu > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+      }
+      .side-menu-container {
+        position: fixed;
+        height: 100vh;
+        left: 0px;
+      }
+      .side-menu > a {
+        margin: 10px;
+        height: 40px;
+        border-radius:10px;
+		background-color:#6EACFF;
+      }
+      .side-menu > a:hover {
+        margin: 10px;
+        height: 40px;
+        color: #fff;
+        background-color: #6EABBC;
+      }
+    </style>
+  </head>
+  <body style="margin:0px">
+	<header id="menu_gorne">
+	<nav>
+	<div class="logo v1" >Kamen Rider - krótkie omówienie</div>
+	<div class="logo v2"><img style="width:30px;height:30px" src="Images/icon.ico" alt="Alternate logo"/></div>
+	<div class="button v3"><a href="#sekcja1">Wprowadzenie</a></div>
+	<div class="button v3"><a href="#sekcja2">Podział serii</a></div>
+	<div class="button v3"><a href="#sekcja3">Wybrane serie</a></div>
+	<div class="button v3"><a href="#sekcja4">Ulubieni Riderzy</a></div>
+	<div class="button v4"><a href="#sekcja1"><img style="width:30px;height:30px" src="Images/s1.png" alt="Alt1"/></a></div>
+	<div class="button v4"><a href="#sekcja2"><img style="width:30px;height:30px" src="Images/s2.png" alt="Alt2"/></a></div>
+	<div class="button v4"><a href="#sekcja3"><img style="width:30px;height:30px" src="Images/s3.png" alt="Alt3"/></a></div>
+	<div class="button v4"><a href="#sekcja4"><img style="width:30px;height:30px" src="Images/s4.png" alt="Alt4"/></a></div>
+	</nav>
+	</header>
+    <div class="side-menu-container" id="menu-boczne">
+      <nav class="side-menu">
+        <a href="#sekcja1"
+          ><div><img style="width:30px;height:30px" src="Images/s1.png" alt="Alt1"/></div
+        ></a>
+        <a href="#sekcja2"
+          ><div><img style="width:30px;height:30px" src="Images/s2.png" alt="Alt2"/></div
+        ></a>
+        <a href="#sekcja3"
+          ><div><img style="width:30px;height:30px" src="Images/s3.png" alt="Alt3"/></div
+        ></a>
+        <a href="#sekcja4"
+          ><div><img style="width:30px;height:30px" src="Images/s4.png" alt="Alt4"/></div
+        ></a>
+      </nav>
+    </div>
+	<div class="landing-page"><img style="width:100vw;height:100vh"src="Images/galaxy.jpg" alt="landing_page">
+	</div>
+  <div class="container-main container">
+  <div class="container" id="sekcja1">
+    <h2 style="color:indigo">Wprowadzenie</h2>
+    <p>
+	<span style="font-size:16px">
+	Kamen Rider (Zamaskowany Jeździec) jest japońską franczyzą, która obejmuje gry, mangę, ale przede wszystkim seriale, pojawiąjące się nieprzerwanie od 1971 roku.
+	Elementem łączącym każdą serię, jest umiejętność głównego bohatera (a nierzadko także pobocznych postaci) do przemiany w tytułowego Ridera za pomącą specjalnego pasa.
+	Poza tym jednak, każda odsłona serii ma odmienny i unikalny motyw przewodni oraz klimat, które każdą z nich czynią niepowtarzalną.
+	Poszczególne serie nie są ze sobą połączone fabularnie, przez co można je oglądać w dowolnej kolejności.
+	Mimo to, pomiędzy emisją kolejnych iteracji, często pojawia się pełnometrażowy film, w którym postacie z kilku poprzednich odsłon spotykają się.</span>
+	</p>
+	<img class="img1"
+      src="https://static.wikia.nocookie.net/kamenrider/images/7/7b/All_Kamen_Riders_Slider.jpeg/revision/latest/scale-to-width-down/670?cb=20210809041536"
+	  alt="Plakat na 50-tą rocznicę marki"/>
+	<br/><br/>
+	<a href="https://kamenrider.fandom.com/wiki/Kamen_Rider_Wiki">Link do nieoficjalnej strony wiki</a>
+	<hr/>
+	</div>
+	<div class="container" id="sekcja2">
+	<h2 style="color:indigo">Podział serii</h2>
+	<p style="font-size:16px">Serie można podzielić ze względu na okres, podczas którego miały one swoją premierę. Zazwyczaj pokrywają się one z obecnymi w Japonii erami, których zmiana następuje
+	w momencie objęcia tronu przez nowego cesarza. Pierwsze odsłony, powstałe podczas ery Shōwa charakteryzują się nieco mrocznieszym i brutalniejszym klimatem.
+	Serie Heisei, za których początek uznaje się rok 2000, ukierunkowały się na bardziej komediowe przedstawienie świata, nadal jednak poruszając poważniejsze tematy.
+	Najnowsza seria - Reiwa, również podąża podobnym schematem, widoczne są jednak drobne różnice w porównaniu z poprzednimi iteracjami</p>
+    <table style="border:3px solid black;margin-left: auto;margin-right: auto;border-spacing:16px">
+      <thead style="border:3px solid black;">
+        <tr>
+          <td>Rok rozpoczęcia emisji</td>
+          <td>Liczba serii</td>
+		  <td>Era</td>
+        </tr>
+      </thead>
+      <tbody style="border:3px solid black;">
+        <tr style="border:3px solid black;">
+          <td>1971</td>
+          <td>9</td>
+		  <td>Shōwa</td>
+        </tr>
+        <tr style="border:3px solid black;">
+          <td>2000</td>
+          <td>20</td>
+		  <td>Heisei</td>
+        </tr>
+		        <tr style="border:3px solid black;">
+          <td>2019</td>
+          <td>3</td>
+		  <td>Reiwa</td>
+        </tr>
+      </tbody>
+    </table>
+	</div>
+	<div class="container" id="sekcja3">
+	<h2 style="color:indigo">Wybrane serie i ich krótki opis</h2>
+    <ul style="font-size:16px;list-style-type: none">
+      <li><div class="d1"><b>Kamen Rider Build</b><p>
+		<img class="img2"
+		src="https://image.tmdb.org/t/p/original/vDUQkLqrXB8ZwMMuGegK1PNc7me.jpg"
+		alt="Build"/>
+		<br/><br/>
+	  Prawie dekadę przed wydarzeniami serialu, Japonia zostaje podzielona na 3 dystrykty, między którymi wkrótce wybucha wojna domowa.
+	  Główny bohater - Sento Kiryu, jest genialnym naukowcem, który stracił wszystkie wspomnienia sprzed ostatniego roku.
+	  Szukając poszlak dotyczących swojej przeszłości, napotyka oskarżonego o morderstwo uciekiniera, który okazuje się być powiązany z amnezją Sento.
+	  </p>
+	  </div><br/></li>
+	  <li><div class="d1"><b>Kamen Rider Gaim</b><p>
+	  	<img class="img2"
+		src="https://static.wikia.nocookie.net/kamenrider/images/f/f6/Gaim_Poster.png/revision/latest?cb=20180807152341"
+		alt="Gaim"/>
+		<br/><br/>
+	  W mieście Zawame zaczynają otwierać się przejścia do innego wymiaru, który niegdyś tętniący życiem, został całkowicie porośnięty przez tajemniczą
+	  i niuestępliwą roślinność, która stworzyła warunki niemożliwe do przeżycia. Zabójcza flora powoli infekuje również Ziemię i stwarza coraz większe zagrożenie dla jej mieszkańców.
+	  Jedyną szansą na ocalenie ludzkości jest specjalny projekt opracowany przez korporację Yggdrasil, która w celu jego realizacji podejmuje drastyczne kroki.
+	  </p></div><br/>
+	  </li>
+      <li><div class="d1"><b>Kamen Rider Den-O</b><p>
+	  	<img class="img2"
+		src="https://m.media-amazon.com/images/M/MV5BNzk1OGFlNzMtNzdiMy00ZDYzLThjOTctYWJhNWZkYzI5ZGNjXkEyXkFqcGdeQXVyMjU0ODQ5NTA@._V1_.jpg"
+		alt="Den-O"/>
+		<br/><br/>
+	  Bohaterowie tej serii poruszają się zdolnym do podróży w czasie pociągiem, aby zapobiec inwazji przybywających z przyszłości Imaginów - istot, które
+	  spełniając życzenia ludzi, przenoszą się do ich przeszłości aby siać tam chaos. Wciągająca fabuła i charyzmatyczne postacie czynią ją jedną z najbardziej lubianych odłon serii.
+	  </p></div>
+	  </li>
+    </ul>
+	<hr/>
+	</div>
+	<div class="container" id="sekcja4">
+	<h2 style="color:indigo">Ulubieni Riderzy</h2>
+	<p>W tabeli po lewej znajdują się moi ulubieni główni Riderzy, zaś w tej po prawej - ulubieni poboczni Riderzy.
+	</p>
+	<div style="display:flex;justify-content:center">
+	<div class="d1">
+	<ol>
+	<li>Build</li>
+	<li>Zi-O</li>
+	<li>Gaim</li>
+	<li>Ghost</li>
+	<li>Fourze</li>
+	</ol></div>
+	<div class="d1">
+	<ol>
+	<li>Cross-Z</li>
+	<li>Vulcan</li>
+	<li>Rogue</li>
+	<li>Mach</li>
+	<li>Meteor</li>
+	</ol></div>
+	</div>
+	</div>
+	<hr/>
+	</div>
+	<footer style="font-size:14px">Piotr Stawarski, 2022 ©</footer>
+  </body>
+</html>
